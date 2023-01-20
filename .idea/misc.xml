@@ -8,7 +8,9 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToe/app/src/main/res/drawable/round_back_yellow1000.xml" value="0.144" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToe/app/src/main/res/drawable/round_back_yellow_border.xml" value="0.144" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToe/app/src/main/res/layout/activity_add_players.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToe/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToe/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToe/app/src/main/res/layout/winchance_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TicTacToe/app/src/main/res/layout/windialog_layout.xml" value="0.1" />
       </map>
     </option>
   </component>

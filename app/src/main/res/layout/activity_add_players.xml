@@ -36,6 +36,8 @@
                 android:adjustViewBounds="true"
                 />
             <EditText
+                android:inputType="text"
+                android:maxLines="1"
                 android:id="@+id/FirstPlayerName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -68,6 +70,8 @@
             android:adjustViewBounds="true"
             />
         <EditText
+            android:inputType="text"
+            android:maxLines="1"
             android:id="@+id/SecondPlayerName"
             android:layout_width="match_parent"
             android:layout_height="50dp"
