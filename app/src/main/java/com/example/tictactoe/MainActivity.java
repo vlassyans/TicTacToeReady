@@ -8,8 +8,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -158,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
         boxPositions[selectedBoxPosition] = playerTurn;
 
         if(playerTurn == 1){
-            imageView.setImageResource(R.drawable.cross_icon);
+            imageView.setImageResource(R.drawable.cross);
 
             if(checkPlayerWin()){
                 WinDialog winDialog = new WinDialog(MainActivity.this, FirstPlayerName.getText().toString() + "has won the match" , MainActivity.this);
@@ -177,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else{
-            imageView.setImageResource(R.drawable.zero_icon);
+            imageView.setImageResource(R.drawable.zero);
 
             if(checkPlayerWin()){
                 WinDialog winDialog = new WinDialog(MainActivity.this, SecondPlayerName.getText().toString() + "has won the match" , MainActivity.this);
@@ -200,12 +198,12 @@ public class MainActivity extends AppCompatActivity {
         playerTurn = currentPlayerName;
 
         if(playerTurn == 1){
-            FirstPlayerLayout.setBackgroundResource(R.drawable.round_back_green);
-            SecondPlayerLayout.setBackgroundResource(R.drawable.round_back_green);
+            FirstPlayerLayout.setBackgroundResource(R.drawable.pinky);
+            SecondPlayerLayout.setBackgroundResource(R.drawable.pinky);
         }
         else{
-            SecondPlayerLayout.setBackgroundResource(R.drawable.round_back_green);
-            FirstPlayerName.setBackgroundResource(R.drawable.round_back_green);
+            SecondPlayerLayout.setBackgroundResource(R.drawable.pinky);
+            FirstPlayerName.setBackgroundResource(R.drawable.pinky);
         }
 
     }
@@ -236,15 +234,15 @@ public void restartMatch(){
 
         playerTurn = 1;
         totalSelectedBoxes = 1;
-        image9.setImageResource(R.drawable.ic_launcher_background);
-    image1.setImageResource(R.drawable.ic_launcher_background);
-    image2.setImageResource(R.drawable.ic_launcher_background);
-    image3.setImageResource(R.drawable.ic_launcher_background);
-    image4.setImageResource(R.drawable.ic_launcher_background);
-    image5.setImageResource(R.drawable.ic_launcher_background);
-    image6.setImageResource(R.drawable.ic_launcher_background);
-    image7.setImageResource(R.drawable.ic_launcher_background);
-    image8.setImageResource(R.drawable.ic_launcher_background);
+        image9.setImageResource(R.drawable.white);
+    image1.setImageResource(R.drawable.white);
+    image2.setImageResource(R.drawable.white);
+    image3.setImageResource(R.drawable.white);
+    image4.setImageResource(R.drawable.white);
+    image5.setImageResource(R.drawable.white);
+    image6.setImageResource(R.drawable.white);
+    image7.setImageResource(R.drawable.white);
+    image8.setImageResource(R.drawable.white);
 }
 }
 

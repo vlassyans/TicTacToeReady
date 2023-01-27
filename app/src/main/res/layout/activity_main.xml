@@ -4,77 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/backgroundd"
     tools:context=".MainActivity">
-<LinearLayout
-    android:layout_above="@id/container"
-    android:layout_alignParentTop="true"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center"
-    >
 
     <LinearLayout
-        android:id="@+id/FirstPlayerLayout"
-        android:layout_width="120dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/round_back_yellow_border"
+        android:layout_above="@id/container"
+        android:layout_alignParentTop="true"
         android:gravity="center"
-        >
+        android:orientation="horizontal">
 
-        <TextView
-            android:maxLines="1"
-            android:id="@+id/FirstPlayerName"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/FirstPlayerLayout"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="First Player"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:gravity="center"/>
+            android:background="@drawable/pinky"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/cross_icon"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/FirstPlayerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="First Player"
+                android:textColor="#000000"
+                android:textSize="18sp" />
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/cross" />
 
-    <LinearLayout
-        android:id="@+id/SecondPlayerLayout"
-        android:layout_marginStart="30dp"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/round_back_yellow_border"
-        android:gravity="center"
-        >
+        </LinearLayout>
 
-        <TextView
-            android:maxLines="1"
-            android:id="@+id/SecondPlayerName"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/SecondPlayerLayout"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="Second Player"
-            android:layout_marginTop="20dp"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:gravity="center"/>
+            android:layout_marginStart="30dp"
+            android:background="@drawable/pinky"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/zero_icon"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/SecondPlayerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Second Player"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/zero" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 
     <LinearLayout
         android:id="@+id/container"
@@ -85,7 +83,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="50dp"
         android:orientation="vertical"
-        android:background="@drawable/background">
+        android:background="@drawable/pinky">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -98,7 +96,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/dark_pink"
+                android:background="@drawable/white"
                 android:src="#FFFFFF"
                 android:adjustViewBounds="true"
                 android:padding="20dp"
@@ -111,7 +109,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/dark_pink"
+                android:background="@drawable/white"
                 android:src="#FFFFFF"
                 android:adjustViewBounds="true"
                 android:padding="20dp"
@@ -125,7 +123,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/dark_pink"
+                android:background="@drawable/white"
                 android:src="#FFFFFF"
                 android:adjustViewBounds="true"
                 android:padding="20dp"
@@ -147,7 +145,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/dark_pink"
+                android:background="@drawable/white"
                 android:src="#FFFFFF"
                 android:adjustViewBounds="true"
                 android:padding="20dp"
@@ -160,7 +158,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/dark_pink"
+                android:background="@drawable/white"
                 android:src="#FFFFFF"
                 android:adjustViewBounds="true"
                 android:padding="20dp"
@@ -174,7 +172,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/dark_pink"
+                android:background="@drawable/white"
                 android:src="#FFFFFF"
                 android:adjustViewBounds="true"
                 android:padding="20dp"
@@ -197,7 +195,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/dark_pink"
+                android:background="@drawable/white"
                 android:src="#FFFFFF"
                 android:adjustViewBounds="true"
                 android:padding="20dp"
@@ -210,7 +208,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/dark_pink"
+                android:background="@drawable/white"
                 android:src="#FFFFFF"
                 android:adjustViewBounds="true"
                 android:padding="20dp"
@@ -224,7 +222,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/dark_pink"
+                android:background="@drawable/white"
                 android:src="#FFFFFF"
                 android:adjustViewBounds="true"
                 android:padding="20dp"
