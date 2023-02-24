@@ -13,17 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TicTacToe"
         tools:targetApi="31">
+        <activity android:name=".ComputerGameActivity"></activity>
+
+        <activity android:name = ".ChooseGameActivity"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name = "android.intent.category.LAUNCHER"/>
+        </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="true" ></activity>
         <activity
             android:name=".AddPlayers"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
