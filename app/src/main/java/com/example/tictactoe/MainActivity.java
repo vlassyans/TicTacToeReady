@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
         combinationsList.add(new int[] {2, 4, 6});
         combinationsList.add(new int[] {0, 4, 8});
 
-        final String getFirstPlayerName = getIntent().getStringExtra("FirstPlayer");
-        final String getSecondPlayerName = getIntent().getStringExtra("SecondPlayer");
+        final String getFirstPlayerName = getIntent().getStringExtra("firstPlayer");
+        final String getSecondPlayerName = getIntent().getStringExtra("secondPlayer");
 
         FirstPlayerName.setText(getFirstPlayerName);
         SecondPlayerName.setText(getSecondPlayerName);
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
             imageView.setImageResource(R.drawable.cross);
 
             if(checkPlayerWin()){
-                WinDialog winDialog = new WinDialog(MainActivity.this, FirstPlayerName.getText().toString() + "has won the match" , MainActivity.this);
+                WinDialog winDialog = new WinDialog(MainActivity.this, FirstPlayerName.getText().toString() + " " + "has won the match" , MainActivity.this);
                winDialog.setCancelable(false);
                 winDialog.show();
             }
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
             imageView.setImageResource(R.drawable.zero);
 
             if(checkPlayerWin()){
-                WinDialog winDialog = new WinDialog(MainActivity.this, SecondPlayerName.getText().toString() + "has won the match" , MainActivity.this);
+                WinDialog winDialog = new WinDialog(MainActivity.this, SecondPlayerName.getText().toString() + " " + "has won the match" , MainActivity.this);
                 winDialog.setCancelable(false);
                 winDialog.show();
             }

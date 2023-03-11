@@ -20,14 +20,14 @@ public class ChooseGameActivity extends AppCompatActivity {
         computerMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChooseGameActivity.this, MainActivity.class);
+                Intent intent = new Intent(ChooseGameActivity.this, ComputerGameActivity.class);
                 startActivity(intent);
             }
         });
         playerMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChooseGameActivity.this, MainActivity.class);
+                Intent intent = new Intent(ChooseGameActivity.this, AddPlayers.class);
                 startActivity(intent);
             }
         });
