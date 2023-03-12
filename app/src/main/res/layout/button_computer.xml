@@ -5,77 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundd"
-    tools:context=".ComputerGameActivity">
+    tools:context=".ButtonComp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/container2"
+        android:layout_above="@id/container"
         android:layout_alignParentTop="true"
         android:gravity="center"
         android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
         <LinearLayout
-            android:id="@+id/PlayerLayout"
+            android:id="@+id/FirstPlayerLayout"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:gravity="center"
+            android:layout_gravity="center"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/PlayerName"
+                android:id="@+id/FirstPlayerName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="Player"
+                android:text="First Player"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18dp" />
 
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:src="@drawable/cross" />
+                android:src="@drawable/cross"
+                android:textColor="#000000" />
+
         </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/PlayAgain2"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="40dp"
-            android:background="@drawable/pinky"
-            android:maxLines="1"
-            android:onClick="playAgain"
-            android:text="Play Again"
-            android:textColor="#000000"
-            android:visibility="invisible" />
-
-
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/SecondPlayerLayout"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:text="Winner:"
-            android:visibility="invisible" />
+            android:layout_marginStart="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/SecondPlayerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Second Player"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/zero" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/container2"
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="50dp"
         android:orientation="vertical">
@@ -86,50 +95,47 @@
             android:orientation="horizontal"
             android:weightSum="3">
 
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:onClick="step1"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/pinky"
+                android:padding="20dp"
+                android:src="#FFFFFF" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
+                android:onClick="step2"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@drawable/pinky"
-                android:onClick="dropIn"
                 android:padding="20dp"
-                android:src="#FFFFFF"
-                android:tag="0" />
+                android:src="#FFFFFF" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:background="@drawable/pinky"
-                android:onClick="dropIn"
-                android:padding="20dp"
-                android:src="#FFFFFF"
-                android:tag="1" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
+                android:onClick="step3"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@drawable/pinky"
-                android:onClick="dropIn"
                 android:padding="20dp"
-                android:src="#FFFFFF"
-                android:tag="2" />
+                android:src="#FFFFFF" />
 
         </LinearLayout>
 
@@ -139,50 +145,47 @@
             android:orientation="horizontal"
             android:weightSum="3">
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
+                android:onClick="step4"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@drawable/pinky"
-                android:onClick="dropIn"
                 android:padding="20dp"
-                android:src="#FFFFFF"
-                android:tag="3" />
+                android:src="#FFFFFF" />
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
+                android:onClick="step5"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@drawable/pinky"
-                android:onClick="dropIn"
                 android:padding="20dp"
-                android:src="#FFFFFF"
-                android:tag="4" />
+                android:src="#FFFFFF" />
 
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="10dp"
+                android:onClick="step6"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@drawable/pinky"
-                android:onClick="dropIn"
                 android:padding="20dp"
-                android:src="#FFFFFF"
-                android:tag="5" />
+                android:src="#FFFFFF" />
 
         </LinearLayout>
 
@@ -193,50 +196,47 @@
             android:orientation="horizontal"
             android:weightSum="3">
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="10dp"
+                android:onClick="step7"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@drawable/pinky"
-                android:onClick="dropIn"
                 android:padding="20dp"
-                android:src="#FFFFFF"
-                android:tag="6" />
+                android:src="#FFFFFF" />
 
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
+                android:onClick="step8"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@drawable/pinky"
-                android:onClick="dropIn"
                 android:padding="20dp"
-                android:src="#FFFFFF"
-                android:tag="7" />
+                android:src="#FFFFFF" />
 
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="10dp"
+                android:layout_height="100dp"
+                android:onClick="step9"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@drawable/pinky"
-                android:onClick="dropIn"
                 android:padding="20dp"
-                android:src="#FFFFFF"
-                android:tag="8" />
+                android:src="#FFFFFF" />
 
         </LinearLayout>
 

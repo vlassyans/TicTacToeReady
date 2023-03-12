@@ -138,15 +138,17 @@ public class ComputerGameActivity extends AppCompatActivity {
         }
     }
 
-    public void check() {
-        for (int[] winningPosition : winningPositions) {
-            if (gameState[winningPosition[0]] == gameState[winningPosition[1]] && gameState[winningPosition[1]] == gameState[winningPosition[2]] && gameState[winningPosition[0]] != 2) {
+    public void check(){
+        for(int[] winningPosition : winningPositions){
+            if(gameState[winningPosition[0]] == gameState[winningPosition[1]] && gameState[winningPosition[1]] == gameState[winningPosition[2]] && gameState[winningPosition[0]]!=2){
                 gameActive = false;
                 String winner = "";
 
-                if (activePlayer == 1) {
+                if(activePlayer == 1){
                     winner = "zero";
-                } else {
+
+                }
+                else{
                     winner = "cross";
                 }
 
@@ -172,8 +174,8 @@ public class ComputerGameActivity extends AppCompatActivity {
         TextView winnerTextView = findViewById(R.id.textView2);
           LinearLayout linearLayout = findViewById(R.id.container2);
 
-        playAgain.setVisibility(View.VISIBLE);
-       winnerTextView.setVisibility(View.VISIBLE);
+        playAgain.setVisibility(View.INVISIBLE);
+       winnerTextView.setVisibility(View.INVISIBLE);
 
        for(int i = 0; i < linearLayout.getChildCount(); i++){
              ImageView counter = (ImageView) linearLayout.getChildAt(i);
