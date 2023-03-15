@@ -30,89 +30,55 @@ public class ComputerGameActivity extends AppCompatActivity {
             int select = emptySquares.size();
             int selected = new Random().nextInt(select);
             String selectedSquare = emptySquares.get(selected);
-
+            gameState[Integer.parseInt(selectedSquare)] = activePlayer;
+            activePlayer = 0;
+            emptySquares.remove(selectedSquare);
             switch (selectedSquare) {
 
 
                 case "0":
                     ImageView imageView1 = findViewById(R.id.imageView1);
                     imageView1.setImageResource(R.drawable.cross);
-                    activePlayer = 0;
-                    emptySquares.remove(selectedSquare);
-                    gameState[Integer.parseInt(selectedSquare)] = activePlayer;
-
                     break;
 
                 case "1":
                     ImageView imageView2 = findViewById(R.id.imageView2);
                     imageView2.setImageResource(R.drawable.cross);
-                    activePlayer = 0;
-                    emptySquares.remove(selectedSquare);
-                    gameState[Integer.parseInt(selectedSquare)] = activePlayer;
-
                     break;
 
                 case "2":
                     ImageView imageView3 = findViewById(R.id.imageView3);
                     imageView3.setImageResource(R.drawable.cross);
-                    activePlayer = 0;
-                    emptySquares.remove(selectedSquare);
-                    gameState[Integer.parseInt(selectedSquare)] = activePlayer;
-
                     break;
 
                 case "3":
                     ImageView imageView4 = findViewById(R.id.imageView4);
                     imageView4.setImageResource(R.drawable.cross);
-                    activePlayer = 0;
-                    emptySquares.remove(selectedSquare);
-                    gameState[Integer.parseInt(selectedSquare)] = activePlayer;
-
                     break;
 
                 case "4":
                     ImageView imageView5 = findViewById(R.id.imageView5);
                     imageView5.setImageResource(R.drawable.cross);
-                    activePlayer = 0;
-                    emptySquares.remove(selectedSquare);
-                    gameState[Integer.parseInt(selectedSquare)] = activePlayer;
-
                     break;
 
                 case "5":
                     ImageView imageView6 = findViewById(R.id.imageView6);
                     imageView6.setImageResource(R.drawable.cross);
-                    activePlayer = 0;
-                    emptySquares.remove(selectedSquare);
-                    gameState[Integer.parseInt(selectedSquare)] = activePlayer;
-
                     break;
 
                 case "6":
                     ImageView imageView7 = findViewById(R.id.imageView7);
                     imageView7.setImageResource(R.drawable.cross);
-                    activePlayer = 0;
-                    emptySquares.remove(selectedSquare);
-                    gameState[Integer.parseInt(selectedSquare)] = activePlayer;
-
                     break;
 
                 case "7":
                     ImageView imageView8 = findViewById(R.id.imageView8);
                     imageView8.setImageResource(R.drawable.cross);
-                    activePlayer = 0;
-                    emptySquares.remove(selectedSquare);
-                    gameState[Integer.parseInt(selectedSquare)] = activePlayer;
-
                     break;
 
                 case "8":
                     ImageView imageView9 = findViewById(R.id.imageView9);
                     imageView9.setImageResource(R.drawable.cross);
-                    activePlayer = 0;
-                    emptySquares.remove(selectedSquare);
-                    gameState[Integer.parseInt(selectedSquare)] = activePlayer;
-
                     break;
             }
             check();
@@ -123,9 +89,11 @@ public class ComputerGameActivity extends AppCompatActivity {
     public void dropIn(View view) {
         ImageView counter = (ImageView) view;
         int tappedCounter = Integer.parseInt(counter.getTag().toString());
-        if (gameState[tappedCounter] == 2 && gameActive && emptySquares.contains(Integer.toString(tappedCounter))) {
-            gameState[tappedCounter] = activePlayer;
 
+        if (gameState[tappedCounter] == 2 && gameActive && emptySquares.contains(Integer.toString(tappedCounter))) {
+gameState[tappedCounter] = activePlayer;
+
+            gameState[tappedCounter] = activePlayer;
             if (activePlayer == 0) {
                 counter.setImageResource(R.drawable.zero);
                 activePlayer = 1;
@@ -135,12 +103,17 @@ public class ComputerGameActivity extends AppCompatActivity {
                 check();
                 computer();
             }
+            else{
+                counter.setImageResource(R.drawable.cross);
+                activePlayer = 0;
+
+            }
         }
     }
 
     public void check(){
         for(int[] winningPosition : winningPositions){
-            if(gameState[winningPosition[0]] == gameState[winningPosition[1]] && gameState[winningPosition[1]] == gameState[winningPosition[2]] && gameState[winningPosition[0]]!=2){
+            if(gameState[winningPosition[0]] == gameState[winningPosition[1]] && gameState[winningPosition[1]] == gameState[winningPosition[2]] && gameState[winningPosition[0]]!=2 && gameState[winningPosition[1]] != 2 && gameState[winningPosition[2]] != 2){
                 gameActive = false;
                 String winner = "";
 
@@ -160,16 +133,16 @@ public class ComputerGameActivity extends AppCompatActivity {
                 playAgain.setVisibility(View.VISIBLE);
                 winnerTextView.setVisibility(View.VISIBLE);
 
-            } else {
+            }else{
                 Button playAgain = findViewById(R.id.PlayAgain2);
                 playAgain.setVisibility(View.VISIBLE);
+            }
 
             }
+
         }
 
-    }
-
-      public void playAgain(View view) {
+        public void playAgain(View view) {
        Button playAgain = findViewById(R.id.PlayAgain2);
         TextView winnerTextView = findViewById(R.id.textView2);
           LinearLayout linearLayout = findViewById(R.id.container2);
@@ -178,16 +151,21 @@ public class ComputerGameActivity extends AppCompatActivity {
        winnerTextView.setVisibility(View.INVISIBLE);
 
        for(int i = 0; i < linearLayout.getChildCount(); i++){
-             ImageView counter = (ImageView) linearLayout.getChildAt(i);
-             counter.setImageDrawable(null);
+             LinearLayout counter = (LinearLayout) linearLayout.getChildAt(i);
+
+           for(int j = 0; j<counter.getChildCount(); j++){
+               ImageView image = (ImageView) counter.getChildAt(j);
+               image.setImageResource(R.color.white);
+           }
         }
 
       for(int i = 0; i<gameState.length; i++){
            gameState[i] = 2;
         }
-         activePlayer = 0;
-         gameActive = true;
-     }
+          emptySquares.clear();
+           activePlayer = 0;
+          gameActive = true;
+    }
 
 
      @Override
@@ -195,9 +173,9 @@ public class ComputerGameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_computer_game);
 
-        emptySquares.add("0");
+         emptySquares.add("0");
          emptySquares.add("1");
-       emptySquares.add("2");
+         emptySquares.add("2");
          emptySquares.add("3");
          emptySquares.add("4");
          emptySquares.add("5");
