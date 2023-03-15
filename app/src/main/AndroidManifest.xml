@@ -27,6 +27,11 @@
             android:exported="false"/>
 
         <activity
+            android:name=".AddPlayerComp"
+            android:exported="false"/>
+
+
+        <activity
             android:name=".ChooseGameActivity"
             android:exported="true">
         <intent-filter>

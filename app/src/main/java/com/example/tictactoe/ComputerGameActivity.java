@@ -183,6 +183,11 @@ gameState[tappedCounter] = activePlayer;
          emptySquares.add("7");
          emptySquares.add("8");
 
+         TextView PlayerName;
+         PlayerName = findViewById(R.id.PlayerName);
+         final String getPlayerName = getIntent().getStringExtra("PlayerName");
+         PlayerName.setText(getPlayerName);
+
      }
 }
 
