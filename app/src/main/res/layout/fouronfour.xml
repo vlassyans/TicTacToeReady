@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundd"
-    tools:context=".ComputerGameActivity">
+    tools:context=".fourOnFour">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="4">
 
             <ImageView
                 android:id="@+id/imageView1"
@@ -130,46 +130,8 @@
                 android:src="#FFFFFF"
                 android:tag="2" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:background="@drawable/pinky"
-                android:onClick="dropIn"
-                android:padding="20dp"
-                android:src="#FFFFFF"
-                android:tag="3" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:background="@drawable/pinky"
-                android:onClick="dropIn"
-                android:padding="20dp"
-                android:src="#FFFFFF"
-                android:tag="4" />
-
-            <ImageView
-                android:id="@+id/imageView6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -181,16 +143,44 @@
                 android:onClick="dropIn"
                 android:padding="20dp"
                 android:src="#FFFFFF"
-                android:tag="5" />
+                android:tag="3" />
 
         </LinearLayout>
 
-        <LinearLayout
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="4">
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/pinky"
+            android:onClick="dropIn"
+            android:padding="20dp"
+            android:src="#FFFFFF"
+            android:tag="4" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/pinky"
+            android:onClick="dropIn"
+            android:padding="20dp"
+            android:src="#FFFFFF"
+            android:tag="5" />
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -213,7 +203,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
+                android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@drawable/pinky"
@@ -221,6 +211,14 @@
                 android:padding="20dp"
                 android:src="#FFFFFF"
                 android:tag="7" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
 
             <ImageView
                 android:id="@+id/imageView9"
@@ -236,6 +234,119 @@
                 android:padding="20dp"
                 android:src="#FFFFFF"
                 android:tag="8" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/pinky"
+                android:onClick="dropIn"
+                android:padding="20dp"
+                android:src="#FFFFFF"
+                android:tag="9" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/pinky"
+                android:onClick="dropIn"
+                android:padding="20dp"
+                android:src="#FFFFFF"
+                android:tag="10" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/pinky"
+                android:onClick="dropIn"
+                android:padding="20dp"
+                android:src="#FFFFFF"
+                android:tag="11" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/pinky"
+                android:onClick="dropIn"
+                android:padding="20dp"
+                android:src="#FFFFFF"
+                android:tag="12" />
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/pinky"
+                android:onClick="dropIn"
+                android:padding="20dp"
+                android:src="#FFFFFF"
+                android:tag="13" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/pinky"
+                android:onClick="dropIn"
+                android:padding="20dp"
+                android:src="#FFFFFF"
+                android:tag="14" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/pinky"
+                android:onClick="dropIn"
+                android:padding="20dp"
+                android:src="#FFFFFF"
+                android:tag="15" />
 
         </LinearLayout>
 

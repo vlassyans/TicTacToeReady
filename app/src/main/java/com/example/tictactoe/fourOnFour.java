@@ -2,7 +2,6 @@ package com.example.tictactoe;
 
 import android.graphics.drawable.DrawableContainer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
@@ -18,10 +17,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class ComputerGameActivity extends AppCompatActivity {
+public class fourOnFour extends AppCompatActivity {
     int activePlayer = 0;
-    int[] gameState = {2, 2, 2, 2, 2, 2, 2, 2, 2};
-    int[][] winningPositions = {{0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, {0, 4, 8}, {2, 4, 6}};
+    int[] gameState = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,  2, 2, 2, 2};
+    int[][] winningPositions = { {4, 5, 6, 7}, {8, 9, 10, 11}, {12, 13, 14, 15}, {0, 4, 8, 12}, {1, 5, 9, 13}, {2, 6, 10, 14}, {3, 7, 11, 15},{0, 5, 10, 15},{3, 6, 9, 12}};
     boolean gameActive = true;
     ArrayList<String> emptySquares = new ArrayList<>();
 
@@ -81,6 +80,46 @@ public class ComputerGameActivity extends AppCompatActivity {
                     ImageView imageView9 = findViewById(R.id.imageView9);
                     imageView9.setImageResource(R.drawable.cross);
                     break;
+
+                case "9":
+                    ImageView imageView10 = findViewById(R.id.imageView10);
+                    imageView10.setImageResource(R.drawable.cross);
+                    break;
+
+                case "10":
+                    ImageView imageView11 = findViewById(R.id.imageView11);
+                    imageView11.setImageResource(R.drawable.cross);
+                    break;
+
+
+                case "11":
+                    ImageView imageView12 = findViewById(R.id.imageView12);
+                    imageView12.setImageResource(R.drawable.cross);
+                    break;
+
+
+                case "12":
+                    ImageView imageView13 = findViewById(R.id.imageView13);
+                    imageView13.setImageResource(R.drawable.cross);
+                    break;
+
+
+                case "13":
+                    ImageView imageView14 = findViewById(R.id.imageView14);
+                    imageView14.setImageResource(R.drawable.cross);
+                    break;
+
+
+                case "14":
+                    ImageView imageView15 = findViewById(R.id.imageView15);
+                    imageView15.setImageResource(R.drawable.cross);
+                    break;
+
+
+                case "15":
+                    ImageView imageView16 = findViewById(R.id.imageView16);
+                    imageView16.setImageResource(R.drawable.cross);
+                    break;
             }
             check();
         }
@@ -90,11 +129,9 @@ public class ComputerGameActivity extends AppCompatActivity {
     public void dropIn(View view) {
         ImageView counter = (ImageView) view;
         int tappedCounter = Integer.parseInt(counter.getTag().toString());
-        Log.i("dropcalled",tappedCounter+"");
 
         if (gameState[tappedCounter] == 2 && gameActive && emptySquares.contains(Integer.toString(tappedCounter))) {
-gameState[tappedCounter] = activePlayer;
-Log.i("dropcalled2","dropcalled2");
+            gameState[tappedCounter] = activePlayer;
 
             gameState[tappedCounter] = activePlayer;
             if (activePlayer == 0) {
@@ -141,65 +178,67 @@ Log.i("dropcalled2","dropcalled2");
                 playAgain.setVisibility(View.VISIBLE);
             }
 
-            }
-
         }
 
-        public void playAgain(View view) {
-       Button playAgain = findViewById(R.id.PlayAgain2);
+    }
+
+    public void playAgain(View view) {
+        Button playAgain = findViewById(R.id.PlayAgain2);
         TextView winnerTextView = findViewById(R.id.textView2);
-          LinearLayout linearLayout = findViewById(R.id.container2);
+        LinearLayout linearLayout = findViewById(R.id.container2);
 
         playAgain.setVisibility(View.INVISIBLE);
-       winnerTextView.setVisibility(View.INVISIBLE);
+        winnerTextView.setVisibility(View.INVISIBLE);
 
-       for(int i = 0; i < linearLayout.getChildCount(); i++){
-             LinearLayout counter = (LinearLayout) linearLayout.getChildAt(i);
+        for(int i = 0; i < linearLayout.getChildCount(); i++){
+            LinearLayout counter = (LinearLayout) linearLayout.getChildAt(i);
 
-           for(int j = 0; j<counter.getChildCount(); j++){
-               ImageView image = (ImageView) counter.getChildAt(j);
-               image.setImageResource(R.drawable.white);
+            for(int j = 0; j<counter.getChildCount(); j++){
+                ImageView image = (ImageView) counter.getChildAt(j);
+                image.setImageResource(R.drawable.white);
 
-           }
+            }
         }
 
-      for(int i = 0; i<gameState.length; i++){
-           gameState[i] = 2;
+        for(int i = 0; i<gameState.length; i++){
+            gameState[i] = 2;
 
         }
-      emptySquares.clear();
-      addTags();
-      activePlayer = 0;
-      gameActive = true;
+
+        activePlayer = 0;
+        gameActive = true;
+
+
+
     }
-public void addTags(){
-    emptySquares.add("0");
-    emptySquares.add("1");
-    emptySquares.add("2");
-    emptySquares.add("3");
-    emptySquares.add("4");
-    emptySquares.add("5");
-    emptySquares.add("6");
-    emptySquares.add("7");
-    emptySquares.add("8");
-}
 
-     @Override
-     protected void onCreate(Bundle savedInstanceState){
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-       setContentView(R.layout.activity_computer_game);
-addTags();
-       TextView PlayerName;
-         PlayerName = findViewById(R.id.PlayerName);
-         final String getPlayerName = getIntent().getStringExtra("PlayerName");
-         PlayerName.setText(getPlayerName);
+        setContentView(R.layout.fouronfour);
 
-     }
+        emptySquares.add("0");
+        emptySquares.add("1");
+        emptySquares.add("2");
+        emptySquares.add("3");
+        emptySquares.add("4");
+        emptySquares.add("5");
+        emptySquares.add("6");
+        emptySquares.add("7");
+        emptySquares.add("8");
+        emptySquares.add("9");
+        emptySquares.add("10");
+        emptySquares.add("11");
+        emptySquares.add("12");
+        emptySquares.add("13");
+        emptySquares.add("14");
+        emptySquares.add("15");
+
+        TextView PlayerName;
+        PlayerName = findViewById(R.id.PlayerName);
+        final String getPlayerName = getIntent().getStringExtra("PlayerName");
+        PlayerName.setText(getPlayerName);
+
+    }
 }
-
-
-
-
-
-
-
