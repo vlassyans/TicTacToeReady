@@ -193,12 +193,12 @@ public class MainActivity extends AppCompatActivity {
         playerTurn = currentPlayerName;
 
         if(playerTurn == 1){
-            FirstPlayerLayout.setBackgroundResource(R.drawable.pinky);
-            SecondPlayerLayout.setBackgroundResource(R.drawable.pinky);
+            FirstPlayerLayout.setBackgroundResource(R.drawable.white);
+            SecondPlayerLayout.setBackgroundResource(R.drawable.white);
         }
         else{
-            SecondPlayerLayout.setBackgroundResource(R.drawable.pinky);
-            FirstPlayerName.setBackgroundResource(R.drawable.pinky);
+            SecondPlayerLayout.setBackgroundResource(R.drawable.white);
+            FirstPlayerName.setBackgroundResource(R.drawable.white);
         }
 
     }

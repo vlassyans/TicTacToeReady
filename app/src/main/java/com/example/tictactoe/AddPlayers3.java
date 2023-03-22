@@ -9,11 +9,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AddPlayers extends AppCompatActivity {
+public class AddPlayers3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_players);
+        setContentView(R.layout.activity_add_players3);
 
         final EditText firstPlayer = findViewById(R.id.FirstPlayerName);
         final EditText secondPlayer = findViewById(R.id.SecondPlayerName);
@@ -28,9 +28,9 @@ public class AddPlayers extends AppCompatActivity {
                 final String getSecondPlayerName = secondPlayer.getText().toString();
 
                 if (getFirstPlayerName.isEmpty() || getSecondPlayerName.isEmpty()) {
-                    Toast.makeText(AddPlayers.this, "Enter player names", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddPlayers3.this, "Enter player names", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(AddPlayers.this, MainActivity.class);
+                    Intent intent = new Intent(AddPlayers3.this, fiveOnFive.class);
                     intent.putExtra("firstPlayer", getFirstPlayerName);
                     intent.putExtra("secondPlayer", getSecondPlayerName);
                     startActivity(intent);
@@ -43,8 +43,3 @@ public class AddPlayers extends AppCompatActivity {
 
 
 }
-
-
-
-
-
