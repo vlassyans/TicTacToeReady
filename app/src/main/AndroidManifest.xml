@@ -43,13 +43,33 @@
         android:exported="false"/>
 
         <activity
+            android:name=".computerfiveonfive"
+            android:exported="false"/>
+
+        <activity
+            android:name=".AddPlayerTwoComp"
+            android:exported="false"/>
+
+        <activity
+            android:name=".computerfouronfour"
+            android:exported="false"/>
+
+        <activity
+            android:name=".AddPlayersOneComp"
+            android:exported="false"/>
+
+        <activity
             android:name=".ComputerGameActivity"
             android:exported="false"/>
+
 
         <activity
             android:name=".AddPlayerComp"
             android:exported="false"/>
 
+        <activity
+            android:name=".fieldshapecomp"
+            android:exported="false"/>
 
         <activity
             android:name=".ChooseGameActivity"
